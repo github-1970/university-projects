@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "iransans";
+  font-style: normal;
+  src: url("../fonts/IRANSansWebFaNum.woff2") format("woff2"),
+    url("../fonts/IRANSansWebFaNum.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "iransans";
+}
+
+body {
+  background-color: #e6f1f7;
+  user-select: none;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  background: linear-gradient(135deg, #fff 0%, #d1dbee 100%);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+  max-width: 450px;
+}
+
+h1 {
+  /* font-size: 36px; */
+  text-align: center;
+  margin-bottom: 30px;
+  color: #545454;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  transition: background-color .3s ease-in-out;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+  background-color: #e6f1f7;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1), 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+input[type="text"]:hover ~ .floating-label,
+input[type="password"]:hover ~ .floating-label{
+  color: gray;
+}
+
+input[type="submit"] {
+  background-color: #50b853;
+  color: white;
+  padding: 2px 20px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color .3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #3c8d3f;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1), 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.floating-label-group {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.floating-label {
+  color: #cccccc;
+  position: absolute;
+  pointer-events: none;
+  top: 6px;
+  right: 12px;
+  transition: all 0.2s ease-in-out;
+  /* margin-bottom: 10px; */
+  font-size: 14px;
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  top: -19px;
+  bottom: 0px;
+  right: 0px;
+  font-size: 11px;
+  opacity: 1;
+  color: #404040;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.remember-me {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.remember-me label {
+  padding-right: .7rem;
+  margin: 4px 0 10px;
+  color: gray;
+  transition: color .2s ease-in-out;
+}
+.remember-me input:checked ~ label {
+  color: black;
+}
+
+.forgot-password {
+  color: darkgray;
+  margin-top: 1rem;
+  transition: color .3s ease-in-out;
+}
+
+.forgot-password:hover {
+  color: gray;
+}
+
+/* custom checkbox */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 4.5px;
+  right: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  transition: background-color .2s ease-in-out;
+}
+
+.checkbox-text {
+  margin-right: 1rem;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #e6f1f7;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1), 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #3c8d3f;
+}
+
+.checkmark:before {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:before {
+  display: block;
+}
+
+.checkbox-container .checkmark:before {
+  left: 4px;
+  top: .2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+/* end custom checkbox */
+
+
+@media only screen and (max-width: 768px) {
+
+}
