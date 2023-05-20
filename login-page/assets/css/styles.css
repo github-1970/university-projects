@@ -36,6 +36,16 @@ a {
   max-width: 450px;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.logo img {
+  width: 80%;
+}
+
 h1 {
   /* font-size: 36px; */
   text-align: center;
